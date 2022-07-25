@@ -21,13 +21,7 @@ const App = () => {
   useEffect(() => {
     fetchCurrencies();
   }, []);
-
-  useEffect(() => {
-    if (!!rates) {
-      changeAmoutFrom(1);
-    }
-  }, [rates]);
-
+  
   const changeAmoutFrom = (amount1) => {
     setAmount2(format((amount1 * rates[UAH]) / rates[USD]));
     setAmount1(amount1);
@@ -45,6 +39,12 @@ const App = () => {
     setAmount1(format((amount2 * rates[USD]) / rates[currency2]));
     setUAH(currency2);
   }
+
+  useEffect(() => {
+    if (!!rates) {
+      changeAmoutFrom(1);
+    }
+  }, [rates]);
 
   return (
     <div className="App">

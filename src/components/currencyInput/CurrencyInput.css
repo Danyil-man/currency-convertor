@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.group {
+  width: 320px;
+  background: #05386b;
+  display: flex;
+  text-align: center;
+  border-radius: 16px;
+  margin: 20px;
+  padding: 5px 10px;
+}
+
+.currency__select {
+  width: 100%;
+  text-align: center;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.currency__input {
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-right: 1px solid #fff;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.currency{
+  background-color: #fff;
+  color: #05386b;
+}

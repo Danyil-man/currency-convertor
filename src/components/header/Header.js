@@ -7,9 +7,9 @@ import "./Header.css";
 const Header = ({ currencies }) => {
   const [EUR, setEUR] = useState(1);
   const [USD, setUSD] = useState(1);
-  const [currency1, setCurrency1] = useState("USD");
-  const [currency2, setCurrency2] = useState("UAH");
-  const [currency3, setCurrency3] = useState("EUR");
+  const [currency1, setCurrency1] = useState(CURRENCY.USD);
+  const [currency2, setCurrency2] = useState(CURRENCY.UAH);
+  const [currency3, setCurrency3] = useState(CURRENCY.EUR);
 
   const setUSDAmount = (amount) => {
     setUSD(format((amount * currencies[currency2]) / currencies[currency1]));

@@ -31,11 +31,11 @@ const App = () => {
     setUSD(currency1);
   }
 
-  const changeAmoutFrom2 = (amount2) => {
+  const changeAmoutTo = (amount2) => {
     setAmount1(format((amount2 * rates[USD]) / rates[UAH]));
     setAmount2(amount2);
   }
-  const changeCurrencyFrom2 = (currency2) => {
+  const changeCurrencyTo= (currency2) => {
     setAmount1(format((amount2 * rates[USD]) / rates[currency2]));
     setUAH(currency2);
   }
@@ -60,8 +60,8 @@ const App = () => {
         currencies={Object.keys(rates)}
         amount={amount2}
         currency={UAH}
-        onAmountChange={changeAmoutFrom2}
-        onCurrencyChange={changeCurrencyFrom2}
+        onAmountChange={changeAmoutTo}
+        onCurrencyChange={changeCurrencyTo}
       />
     </div>
   );
